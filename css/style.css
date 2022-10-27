@@ -1,0 +1,193 @@
+/* @font-face {
+    font-family: "Poppins-Regular";
+    src: url("../fonts/poppins/Poppins-Regular.ttf"); }
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../fonts/poppins/Poppins-SemiBold.ttf"); } */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  body {
+    background-image:url("https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmljeWNsZXxlbnwwfHwwfHw%3D&w=1000&q=80");
+    background-size: cover;
+    font-family:"Poppins-Regular";
+    color: #333;
+    font-size: 13px;
+    margin: 0; }
+  
+  input, textarea, select, button {
+    font-family: "Poppins-Regular";
+    color: #333;
+    font-size: 13px; }
+  
+  p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0; }
+  
+  img {
+    max-width: 100%; }
+  
+  ul {
+    padding-left: 0;
+    margin-bottom: 0; }
+  
+  a:hover {
+    text-decoration: none; }
+  
+  :focus {
+    outline: none; }
+  
+  .wrapper {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; }
+  
+  .inner {
+    padding: 0px;
+    border: rgb(15, 15, 15) solid 2px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgb(252, 252, 252);
+    max-width: 850px;
+    margin: auto;
+    display: flex; }
+    .inner .image-holder {
+      width: 50%; }
+    .inner form {
+      width: 50%;
+      padding-top: 36px;
+      padding-left: 45px;
+      padding-right: 45px; 
+      padding-bottom: 0px;
+      
+    }
+    .inner h3 {
+      text-transform: uppercase;
+      font-size: 25px;
+      font-family: "Poppins-SemiBold";
+      text-align: center;
+      margin-bottom: 28px; }
+  
+  .form-group{
+    display: flex; 
+  }
+  
+    .form-group input {
+      width: 50%; 
+      
+  }
+  
+  
+  
+      .form-group input:first-child {
+        margin-right: 25px; 
+  }
+  
+  
+  .form-wrapper {
+    position: relative; 
+
+  }
+  
+    .form-wrapper i {
+      position: absolute;
+      bottom: 9px;
+      right: 0; }
+  
+  .form-control {
+    border: 1px solid #333;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    margin-bottom: 25px; }
+    .form-control::-webkit-input-placeholder {
+      font-size: 13px;
+      color: #333;
+      font-family: "Poppins-Regular"; }
+    .form-control::-moz-placeholder {
+      font-size: 13px;
+      color: #333;
+      font-family: "Poppins-Regular"; }
+    .form-control:-ms-input-placeholder {
+      font-size: 13px;
+      color: #333;
+      font-family: "Poppins-Regular"; }
+    .form-control:-moz-placeholder {
+      font-size: 13px;
+      color: #333;
+      font-family: "Poppins-Regular"; }
+  
+  
+  button{
+    width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  }
+  button:hover{
+    border-color: #2691d9;
+    transition: .5s;
+  }
+  /* button {
+    border: none;
+    width: 164px;
+    height: 40px;
+    margin: auto;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #333;
+    font-size: 15px;
+    color: #fff;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s; } */
+    button i {
+      margin-left: 10px;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0); }
+    /* button:hover i, button:focus i, button:active i {
+      -webkit-animation-name: hvr-icon-wobble-horizontal;
+      animation-name: hvr-icon-wobble-horizontal;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1; } */
+  
+      .signup_link{
+        margin: 30px 0;
+        text-align: center;
+        font-size: 16px;
+        color: #666666;
+      }
+      .signup_link a{
+        color: #2691d9;
+        text-decoration: none;
+        margin: 15px 0 20px 5px;
+        color: #a6a6a6;
+       cursor: pointer;
+      }
+      .signup_link a:hover{
+        text-decoration: underline;
+      }

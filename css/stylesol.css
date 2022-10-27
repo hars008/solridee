@@ -1,0 +1,232 @@
+body {
+    font-family: 'BrandonGrotesque-Regular';
+    font-size: 16px;
+    font-weight: normal;
+    color: #d9d9dd;
+}
+#title{
+    background-color:#edf0f1;
+    color:rgb(250, 253, 252);
+    
+}
+h1 {
+    font-family: "Montserrat-Black";
+    font-weight:bold;
+    margin-bottom:3rem;
+    font-size:3.5rem;
+    line-height:1.2;
+    
+}
+.fluid-container{
+    position:absolute;
+    z-index:1000;
+    padding:7% 35% 7% 5%;
+    /* height:300px */
+    /* background-image: url("https://wallpapercave.com/wp/wp6468963.jpg"); */
+    /* background-size: cover; */
+    
+}
+
+.navbar{
+    padding:0.80rem 2.5rem;
+   
+}
+.navbar-brand{
+    font-family:"Ubuntu";
+    font-size:2.25rem;
+    font-weight:bold;
+}
+.nav-item{
+    padding:0 18px;
+}
+.nav-link{
+    font-size:1.2rem;
+    font-family:"Montserrat-Black";
+}
+#testi{
+    /* z-index: -1000; */
+  position:relative;
+  text-align:center;
+  background-color: #fff;
+}
+.d-block{
+  width:10%;
+  height:600px;
+}
+a.carousel-control-next{
+    justify-content: right;
+    padding-right: 10px;
+}
+a.carousel-control-prev{
+    justify-content: left;
+    padding-left: 10px;
+}
+  .fluid-container{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+ 
+ 
+.prods{
+    display: flex;
+    justify-content:space-around;
+    align-items: stretch;
+    flex-wrap:nowrap;
+}
+.items img{
+    width: stretch;
+    height: 300px;
+
+}
+.vc_custom_1509104460796 {
+    background-image: url(https://citycycling.in/wp-content/uploads/2016/06/full-img-1.png?id=819) !important;
+}
+.des-rns {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.faqs{
+    height:600px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3,1fr); 
+    grid-gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../images/bgcycle.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.sub h5{
+    margin-bottom :0px;
+    font-weight:600;
+    /* padding-top: 50px; */
+}
+.faqi{
+    padding: 20px;
+    width:200px;
+}
+.faqi:hover{
+    transition: 0.5s;
+    width:250px;
+    cursor:pointer;
+}
+.btk{
+    display:block;
+    height:50px; 
+    width:150px;
+}
+.foot{
+    text-align:center;
+    /* padding-top: 80px; */
+    padding: 10px;
+    /* display: grid; */
+    justify-content: space-around;
+    /* grid-template-columns: repeat(auto-fill,minmax(200px,3fr 1fr)); */
+    /* font-size:2rem; */
+    /* border: black solid 10px; */
+    background-color: rgb(44, 44, 44);
+}
+.links div{
+    justify-content: center;
+    align-content: center;
+   
+}
+.links {
+    border-left: #fff solid 2px;
+    border-right: #fff solid 2px;
+    /* padding-left: 30px; */
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    
+    background-color: rgb(44, 44, 44);
+    /* font-size:1rem; */
+}
+.links ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#Featured-products{
+    background-color: #e2e8e9;
+    text-align:center;
+    padding:50px 50px 50px 50px;  
+    color:black;
+}
+
+.pp{
+   font-size:1.2rem;
+   line-height:1.5;
+}
+.ff{
+    color: black;
+    font-size:2.2rem;
+    line-height:1.5;
+ }
+ .row{
+    padding:2.5% 10%;
+ }
+ /* .card{
+    width:290px;
+ } */
+ .card{
+    box-shadow: 5px 10px #ffe5e5;
+    border:2px solid rgb(212, 163, 163);
+    border-radius:10px;
+    margin-bottom: 20px;
+ }
+ .card-body{
+    padding:0px;
+ }
+ .card-body h4{
+    font-size:1.4rem;
+ }
+ .card-body p{
+    font-size:1rem;
+ }
+ .card-body img{
+    margin-bottom:20px;
+    width:90%;
+    height:220px;
+ }
+ #testimonials{
+    text-align:center;
+    padding:7% 15%;
+    background-color: #e2e8e9;
+    color:rgb(47, 15, 15);
+    height:600px; 
+}
+.testimonial-image{
+    width:30%;
+    height:200px;
+    border-radius: 100%;
+    margin:20px;
+}
+.review-heading{
+    font-family: "Montserrat-Black";
+    font-weight:lighter;
+     margin-bottom:3rem;
+    /* font-size:3.5rem; */
+    line-height:1.2;
+} 
+.review-heading b{
+    font-weight:bold;
+}
+.social-icon{
+    text-align:center;
+    margin:20px 10px;
+}
+.si{
+    padding-left:47%;
+    padding-right:40%;
+    padding-bottom:5%;
+    padding-top: 2.5%;;
+    background-color: black;
+}
