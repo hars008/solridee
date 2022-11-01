@@ -3,8 +3,8 @@ body{
 }
 .topimg
 {
-  height:15rem;
-  width: 77.5rem;
+  height:auto;
+  width: 100%;
   color:white;
 
 }
@@ -19,8 +19,8 @@ body{
 {
 
   position:absolute;
-  top: 5rem;
-  left: 35rem;
+  top: 50%;
+  left: 50%;
 
   color: white;
 
@@ -43,10 +43,35 @@ body{
   background-color: #EAEAEA;
 }
 .bottom{
+  padding-top: 1.5rem;
+  padding-bottom:  1.5rem;
+
   background-color: #3C4048;
   color:white;
   text-align: center;
 }
+.deals
+{
+  font-size: 0.7rem;
+  font-weight: lighter;
+  color: #CFD2CF;
+
+}
+.btn1
+{
+  width:11rem;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.information ul
+{
+  color: #CFD2CF;
+    list-style-type: none;
+    padding-left: 0px;
+    font-weight: lighter;
+}
+
 
 /* search area */
 :root{
