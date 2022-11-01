@@ -1,0 +1,35 @@
+.topimg
+{
+  height:auto;
+  width: 100%;
+  color:white;
+
+
+}
+.top
+{
+  margin-top: 2rem;
+    padding-left: 10%;
+}
+
+.name{
+  display: inline-inline-block;
+  /* float: left; */
+  position: relative;
+  margin-top: 5rem;
+  background-color: #EADEDE;
+}
+.Hero{
+  position: absolute;
+  padding-left: 10%;
+
+}
+.Hero_price{
+  position: absolute;
+  padding-left:80%;
+  color: #38E54D;
+}
+.Per_Day
+{
+  color: black;
+}
