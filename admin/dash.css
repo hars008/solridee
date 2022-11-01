@@ -1,3 +1,10 @@
+html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+  }
+
 li{
     padding-top:10px;
     padding-bottom:10px;
@@ -16,7 +23,7 @@ ul{
 }
 
 .main-content{
-    height:700px;
+    height:100%;
     padding-right:20px;
 }
 .card-content{
