@@ -52,3 +52,9 @@ ul{
     padding-top:10px;
 }
 
+.details-button div{
+ color:black;
+}
+.details-button:hover{
+  text-decoration:none;
+}
