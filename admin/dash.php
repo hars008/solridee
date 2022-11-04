@@ -62,7 +62,8 @@
                      <div class="upper" style="background-color:#325d88;">
                        <h1> 
                         <?php
-                        include('conn.php');
+                        include('connection.php');
+                        // include('conn.php');
                         $sql = "SELECT * from customer";
 
                      if ($result = mysqli_query($conn, $sql)) {
@@ -75,67 +76,135 @@
  </h1>
                        <p> Reg Users</p>
                      </div>
-                     <a href="#" class="details-button">
+                     <a href="insidepage/regusers.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                   </div>
                   <div class="col-lg-3 col-sm-12 card-content" >
                     <div class="upper" style="background-color:#93c54b;">
-                      <h1> 6</h1>
-                      <p> Listed Vehicles</p>
+                    <h1> 
+                        <?php
+                        include('connection.php');
+                        // include('conn.php');
+                        $sql = "SELECT * from cycles";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?>
+ </h1>
+                      <p> Listed Cycles</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/cycles.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#29abe0;">
-                      <h1> 8</h1>
+                   <h1> <?php
+                        include('connection.php');
+                        // include('conn.php');
+                        $sql = "SELECT * from orders";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Total Bookings</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/orders.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#f47c3c;">
-                      <h1> 7</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        // include('conn.php');
+                        $sql = "SELECT * from brands";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Listed Brands</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/brands.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#325d88;">
-                      <h1> 1</h1>
+                      <h1><?php
+                        include('connection.php');
+                        // include('conn.php');
+                        $sql = "SELECT * from subscribers";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?> </h1>
                       <p> Subscribers</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/subscribers.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#93c54b;">
-                      <h1> 1</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        // include('conn.php');
+                        $sql = "SELECT * from queries";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Queries</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/queries.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#29abe0;">
-                      <h1> 2</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        // include('conn.php');
+                        $sql = "SELECT * from testimonials";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Testimonials</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/testimonials.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
