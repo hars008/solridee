@@ -60,73 +60,85 @@
                <div class="row dashboard-content" style=" text-align:center;margin-top:50px;">
                   <div class="col-lg-3 col-sm-12 card-content">
                      <div class="upper" style="background-color:#325d88;">
-                       <h1> 4</h1>
+                       <h1> 
+                        <?php
+                        include('conn.php');
+                        $sql = "SELECT * from customer";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?>
+ </h1>
                        <p> Reg Users</p>
                      </div>
-                     <div class="lower">
-                        Full Details
-                        <hr>
-                     </div>
+                     <a href="#" class="details-button">
+                     <div class="lower">Full Details->
+                       <hr>
+                     </div></a>
                   </div>
                   <div class="col-lg-3 col-sm-12 card-content" >
                     <div class="upper" style="background-color:#93c54b;">
                       <h1> 6</h1>
                       <p> Listed Vehicles</p>
                     </div>
-                    <div class="lower">
-                       Full Details
+                    <a href="#" class="details-button">
+                     <div class="lower">Full Details->
                        <hr>
-                    </div>
+                     </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#29abe0;">
                       <h1> 8</h1>
                       <p> Total Bookings</p>
                     </div>
-                    <div class="lower">
-                       Full Details
+                    <a href="#" class="details-button">
+                     <div class="lower">Full Details->
                        <hr>
-                    </div>
+                     </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#f47c3c;">
                       <h1> 7</h1>
                       <p> Listed Brands</p>
                     </div>
-                    <div class="lower">
-                       Full Details
+                    <a href="#" class="details-button">
+                     <div class="lower">Full Details->
                        <hr>
-                    </div>
+                     </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#325d88;">
                       <h1> 1</h1>
                       <p> Subscribers</p>
                     </div>
-                    <div class="lower">
-                       Full Details
+                    <a href="#" class="details-button">
+                     <div class="lower">Full Details->
                        <hr>
-                    </div>
+                     </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#93c54b;">
                       <h1> 1</h1>
                       <p> Queries</p>
                     </div>
-                    <div class="lower">
-                       Full Details
+                    <a href="#" class="details-button">
+                     <div class="lower">Full Details->
                        <hr>
-                    </div>
+                     </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#29abe0;">
                       <h1> 2</h1>
                       <p> Testimonials</p>
                     </div>
-                    <div class="lower">
-                       Full Details
+                    <a href="#" class="details-button">
+                     <div class="lower">Full Details->
                        <hr>
-                    </div>
+                     </div></a>
                  </div>
                </div>
          </div>
