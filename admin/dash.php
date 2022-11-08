@@ -62,17 +62,18 @@
                      <div class="upper" style="background-color:#325d88;">
                        <h1> 
                         <?php
-                        include('conn.php');
-                        $sql = "SELECT * from customer";
+                            include('conn.php');
+                            $sql = "SELECT * from customer";
 
-                     if ($result = mysqli_query($conn, $sql)) {
+                             if ($result = mysqli_query($conn, $sql)) {
 
-    // Return the number of rows in result set
-    $rowcount = mysqli_num_rows( $result );
-    
-    // Display result
-    printf($rowcount);}?>
- </h1>
+                            // Return the number of rows in result set
+                            $rowcount = mysqli_num_rows( $result );
+                            
+                            // Display result
+                            printf($rowcount);}
+                         ?>
+                       </h1>
                        <p> Reg Users</p>
                      </div>
                      <a href="#" class="details-button">
@@ -82,7 +83,7 @@
                   </div>
                   <div class="col-lg-3 col-sm-12 card-content" >
                     <div class="upper" style="background-color:#93c54b;">
-                      <h1> 6</h1>
+                      <h1></h1>
                       <p> Listed Vehicles</p>
                     </div>
                     <a href="#" class="details-button">
