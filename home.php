@@ -18,24 +18,24 @@ session_start();
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <!-- css stylesheets -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/stylesol.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/45b5e06856.js" crossorigin="anonymous"></script>
     <!-- bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <section id="title">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -46,43 +46,46 @@ session_start();
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
+    
+      <?php 
+      if(isset($_SESSION['username'])){
+      ?>
+       
     <li class="nav-item active">
-    <?php 
-    if(isset($_SESSION['username'])){
-      
-  ?>
-   <a class="nav-link" href="sign.html">Profile<span class="sr-only"></span></a>
+      <a class="nav-link" href="loginhtml.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+          <a class="nav-link" href="listing.html"><i class="fa-solid fa-heart"></i>Wish List  <span class="sr-only">(current)</span></a>
+    </li>
+      <?php }?>
+
+      <?php 
+        if(!isset($_SESSION['username'])){
+      ?>
+
+        <li class="nav-item active">
+        <a class="nav-link" href="sign.html"><i class="fa-solid fa-house"></i>   Register <span class="sr-only"></span></a>
         </li>
        
         <li class="nav-item active">
-          <a class="nav-link" href="loginhtml.php">Orders <span class="sr-only">(current)</span></a>
-        </li><?php }?>
-    <?php 
-    if(!isset($_SESSION['username'])){
-      
-  ?>
-          <a class="nav-link" href="sign.html">Register <i class="fa-solid fa-house"></i><span class="sr-only"></span></a>
+        <a class="nav-link" href="loginhtml.php"><i class="fa-solid fa-user"></i>   login  <span class="sr-only">(current)</span></a>
         </li>
-       
-        <li class="nav-item active">
-          <a class="nav-link" href="loginhtml.php">login  <i class="fa-solid fa-user"></i><span class="sr-only">(current)</span></a>
-        </li><?php }?>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;font-weight:bold;">Wishlist</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </li>
+        
+        <?php }?>
+
+        
      
           <!-- <li class="nav-item">
               <a class="nav-link active" href="#cta">Book now</a>
           </li> -->
           <li class="nav-item active">
-            <a class="nav-link" href="listing.html">Book Now <i class="fa-solid fa-bookmark"></i><span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="listing.php"><i class="fa-solid fa-bookmark"></i>   Book Now <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i>   Contact us <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>   Faqs <span class="sr-only">(current)</span></a>
           </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -108,48 +111,8 @@ session_start();
             </div>
           </li>
           </ul>
-<?php } ?>
+  <?php } ?>
 </nav>
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-      
-      <a class="navbar-brand" href=""><img src="images/logo.jpg" alt="Logo" width="50" height="54" class="d-inline-block align-text-top"> SolRidee</a>
-       
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto" style="margin-right:10%;">
-        <li class="nav-item active">
-          <a class="nav-link" href="sign.html">Register<span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="loginhtml.php">login <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Wishlist</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </li>
-     
-          <li class="nav-item">
-              <a class="nav-link active" href="#cta">Book now</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="listing.html">Book Now <span class="sr-only">(current)</span></a>
-          </li>
-      </ul>
-      <form class="d-flex" role="search" style="margin-right:10%;">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit" >Search</button>
-      </form>
-      </div>
-  </nav> -->
 
 
   <div class="fluid-container">
@@ -296,7 +259,7 @@ session_start();
     </div></div>
 </div>
   </section>
-  <div class="faqs" style="text-align:center;">
+  <div class="faqs" style="text-align:center;color:white;">
     <div class="sub bookOnline" style="text-align:center;">
       <img src="images/cx.png" alt="" class="faqi"><br>
       <h5>Book Online</h5>

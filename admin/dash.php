@@ -1,7 +1,8 @@
 <?php 
     session_start();
-       
-      
+       if(!isset($_SESSION['userid'])){
+        header('adminlogin.html');
+       }
   ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -34,6 +36,30 @@
           </li>
           </ul>
 <?php } ?>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black" style="background-color:black; height:60px;">
+  <a class="navbar-brand" href="#">
+  <img src="../images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+  
+  SolRidee</a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
+    
+      <?php 
+    if(isset($_SESSION['userid'])){
+  ?>
+        <ul type="none">
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white; "><?php echo $_SESSION['userid'] ; ?></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><?php echo $_SESSION['userid'] ; ?></a>
+              <a class="dropdown-item" href="#">Change Password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="adminlogin.html">Logout</a>
+            </div>
+          </li>
+          </ul>
+  <?php } ?>
+</nav>
     <div class="row main-content" style=" padding-left:0px; ">
          <div class="col-lg-2 col-sm-12" style=" background-color:#2c3136" >
             <nav style=" padding:0px;"class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:0px;padding-top:0px; display:inline-block;">
@@ -44,6 +70,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:#2c3136">
                   <ul class="navbar-nav flex-column">
                     <li class="nav-item active">
+
                       <a  href="#">Dashboard <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown active">
@@ -51,25 +78,25 @@
                           Brands
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Create Brand</a>
-                          <a class="dropdown-item" href="#">Manage Brands</a>
+                          <a class="dropdown-item" href="insidepage/createbrands.php">Create Brand</a>
+                          <a class="dropdown-item" href="insidepage/brands.php">Manage Brands</a>
                       </li>
                     <li class="nav-item dropdown active">
                       <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Vehicles
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Post Vehicles</a>
-                        <a class="dropdown-item" href="#">Manage Vehicles</a>
+                        <a class="dropdown-item" href="insidepage/createvehicles.php">Post Vehicles</a>
+                        <a class="dropdown-item" href="insidepage/cycles.php">Manage Vehicles</a>
                     </li>
                     <li class="nav-item active">
-                      <a href="#">Manage Testimonials</a>
+                      <a href="insidepage/testimonials.php">Manage Testimonials</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="#">Manage Bookings</a>
+                        <a href="insidepage/orders.php">Manage Bookings</a>
                       </li>
                       <li class="nav-item active">
-                        <a href="#">Reg Users</a>
+                        <a href="insidepage/regusers.php">Reg Users</a>
                       </li>
                   </ul>
                  
@@ -83,81 +110,140 @@
                      <div class="upper" style="background-color:#325d88;">
                        <h1> 
                         <?php
-                            include('conn.php');
-                            $sql = "SELECT * from customer";
+                        include('connection.php');
+                        $sql = "SELECT * from customer";
 
-                             if ($result = mysqli_query($conn, $sql)) {
+                     if ($result = mysqli_query($conn, $sql)) {
 
-                            // Return the number of rows in result set
-                            $rowcount = mysqli_num_rows( $result );
-                            
-                            // Display result
-                            printf($rowcount);}
-                         ?>
-                       </h1>
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?>
+ </h1>
                        <p> Reg Users</p>
                      </div>
-                     <a href="#" class="details-button">
+                     <a href="insidepage/regusers.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                   </div>
                   <div class="col-lg-3 col-sm-12 card-content" >
                     <div class="upper" style="background-color:#93c54b;">
-                      <h1></h1>
+                      <h1> <?php
+                        include('connection.php');
+                        $sql = "SELECT * from cycles";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Listed Vehicles</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/cycles.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#29abe0;">
-                      <h1> 8</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        $sql = "SELECT * from orders";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Total Bookings</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/orders.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#f47c3c;">
-                      <h1> 7</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        $sql = "SELECT * from brands";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Listed Brands</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/brands.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#325d88;">
-                      <h1> 1</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        $sql = "SELECT * from subscribers";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Subscribers</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/subscribers.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#93c54b;">
-                      <h1> 1</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        $sql = "SELECT * from queries";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Queries</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/queries.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>
                  </div>
                  <div class="col-lg-3 col-sm-12 card-content">
                     <div class="upper" style="background-color:#29abe0;">
-                      <h1> 2</h1>
+                      <h1> <?php
+                        include('connection.php');
+                        $sql = "SELECT * from testimonials";
+
+                     if ($result = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $result );
+    
+    // Display result
+    printf($rowcount);}?></h1>
                       <p> Testimonials</p>
                     </div>
-                    <a href="#" class="details-button">
+                    <a href="insidepage/testimonials.php" class="details-button">
                      <div class="lower">Full Details->
                        <hr>
                      </div></a>

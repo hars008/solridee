@@ -1,8 +1,22 @@
+<?php
+
+session_start();
+
+// if(!isset($_SESSION['username'])){
+//   header('location:login.php');
+// }
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
+   <!-- google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
@@ -21,50 +35,93 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <title></title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/45b5e06856.js" crossorigin="anonymous"></script>
+    <!-- bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <title>Booking</title>
 </head>
 
 <body>
   <section id="title">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+  <img src="images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+  
+  SolRidee</a>
 
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
+    <li class="nav-item active">
+    <?php 
+    if(isset($_SESSION['username'])){
+      
+  ?>
+   <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
+        </li>
+       
+        <li class="nav-item active">
+          <a class="nav-link" href="loginhtml.php">Orders <span class="sr-only">(current)</span></a>
+        </li><?php }?>
+    <?php 
+    if(!isset($_SESSION['username'])){
+      
+  ?>
+          <a class="nav-link" href="sign.html">Register <i class="fa-solid fa-house"></i><span class="sr-only"></span></a>
+        </li>
+       
+        <li class="nav-item active">
+          <a class="nav-link" href="loginhtml.php">login  <i class="fa-solid fa-user"></i><span class="sr-only">(current)</span></a>
+        </li><?php }?>
+        <li class="nav-item active">
+            <a class="nav-link" href="listing.html">Wish List  <i class="fa-solid fa-heart"></i><span class="sr-only">(current)</span></a>
+          </li>
+     
+          <!-- <li class="nav-item">
+              <a class="nav-link active" href="#cta">Book now</a>
+          </li> -->
+          <li class="nav-item active">
+            <a class="nav-link" href="listing.html">Book Now <i class="fa-solid fa-bookmark"></i><span class="sr-only">(current)</span></a>
+          </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+   
+  </div>
+  <?php 
+    if(isset($_SESSION['username'])){
+       
+      
+  ?>
+        <ul type="none">
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['username'] ; ?></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
+              <a class="dropdown-item" href="#">User Details</a>
+              <a class="dropdown-item" href="#">Orders</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+          </li>
+          </ul>
+<?php } ?>
+</nav>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-black">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">SolRidee</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left:10%; padding-right: 10%;">
-          <ul class="navbar-nav me-auto mb-0 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">About</a>
-            </li>
-
-            <li class="nav-item ">
-              <a class="nav-link active">Bike Listing</a>
-            </li>
-
-            <li class="nav-item ">
-              <a class="nav-link active">FAQs</a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link active">Contact Us</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-            <button id="search-button" class="btn btn-light" type="button" name="button">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+    
 
 
     <!-- Title -->

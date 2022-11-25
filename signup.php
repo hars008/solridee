@@ -15,6 +15,7 @@ $insert = "INSERT INTO customer (firstname,lastname,rollnumber,mobilenumber,host
 ('$fname','$lname','$rn',345,'$h','$ro','$p')";
 
 $results = mysqli_query($conn,$insert) or die(mysqli_error($conn));
+header("Location: loginhtml.php?error=Registered Succesfully!!");
 }
 else{
     echo "<script> alert('enter same password') ;

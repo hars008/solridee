@@ -101,6 +101,9 @@ a.carousel-control-prev{
     background-size: cover;
 
 }
+.faqs h5{
+    color: white;
+}
 
 .sub h5{
     margin-bottom :0px;
@@ -108,6 +111,7 @@ a.carousel-control-prev{
     /* padding-top: 50px; */
 }
 .faqi{
+    color:#d9d9dd;
     padding: 20px;
     width:200px;
 }
