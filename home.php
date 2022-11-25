@@ -12,7 +12,7 @@ session_start();
 
 <head>
   <meta charset="utf-8">
-  <title>Solridee</title>
+  <title>SolRidee</title>
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,14 +35,14 @@ session_start();
 
   <section id="title">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#">
-  <img src="images/logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="">
+  <img src="images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
   
-  Solridee</a>
+  SolRidee</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
@@ -61,11 +61,11 @@ session_start();
     if(!isset($_SESSION['username'])){
       
   ?>
-          <a class="nav-link" href="sign.html">Register<span class="sr-only"></span></a>
+          <a class="nav-link" href="sign.html">Register <i class="fa-solid fa-house"></i><span class="sr-only"></span></a>
         </li>
        
         <li class="nav-item active">
-          <a class="nav-link" href="loginhtml.php">login <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="loginhtml.php">login  <i class="fa-solid fa-user"></i><span class="sr-only">(current)</span></a>
         </li><?php }?>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;font-weight:bold;">Wishlist</a>
@@ -82,7 +82,7 @@ session_start();
               <a class="nav-link active" href="#cta">Book now</a>
           </li> -->
           <li class="nav-item active">
-            <a class="nav-link" href="listing.html">Book Now <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="listing.html">Book Now <i class="fa-solid fa-bookmark"></i><span class="sr-only">(current)</span></a>
           </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -100,9 +100,9 @@ session_start();
          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['username'] ; ?></a>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
               <a class="dropdown-item" href="#">User Details</a>
               <a class="dropdown-item" href="#">Orders</a>
-              <a class="dropdown-item" href="#">Something else here</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="logout.php">Logout</a>
             </div>
@@ -113,7 +113,7 @@ session_start();
 
     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
       
-      <a class="navbar-brand" href=""><img src="images/logo.jpg" alt="Logo" width="50" height="54" class="d-inline-block align-text-top"> Solridee</a>
+      <a class="navbar-brand" href=""><img src="images/logo.jpg" alt="Logo" width="50" height="54" class="d-inline-block align-text-top"> SolRidee</a>
        
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -156,7 +156,7 @@ session_start();
     <div class="row">
       <div class="col-lg-12">
         <h1 style="margin-bottom: 100px;">Get Cycle anytime anywhere by just one click.</h1>
-        <button type="button" class="btn btn-dark btn-lg download-button" onclick=" location.href='listing.html';"><i class="fab fa-cycle"></i>Book a ride</button>
+        <button type="button" class="btn btn-warning btn-lg download-button" onclick=" location.href='listing.html';"><i class="fab fa-cycle"></i>Book a Ride <i class="fa-solid fa-bicycle"></i></button>
         <!-- <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i>Book a ride</button> -->
       </div>
         <!-- <div class="col-lg-6">
@@ -193,11 +193,34 @@ session_start();
         </a>
       </div></section>
   <section id="Featured-products">
+    
 
-    <h2 class="ff"><b>Find the BEST</b> cycle For You</h2>
-    <p class="pp">You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your </br>
-      holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes</br>
-       with best deals!!!</p>
+      <h2 ><b>Find the BEST</b><div class="best" style=" line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #ff5e3a;
+        background: linear-gradient(#ff5e3a 0%, #ff653c 69%, #ff4e3c 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+"> cycle For You</h2></div>
+      <div class="best-1" style="line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #f1a796;
+        background: linear-gradient(#f1a796 0%, #f1a796 69%, #f1a796 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+">
+      <p >You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your </br>
+        holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes</br>
+         with best deals!!!</p>
+    </div>
 <div class="row">
   <div class="pricing-column col-lg-4 col-md-6">
 <div class="card ">
@@ -206,7 +229,7 @@ session_start();
   </div>
   <div class="card-body">
         
-        <img src="images/cycle1.jpg">  <h4>MOUNTAIN BIKE</h4> <p>Unlimited App Usage,BEST EVER BIKE,FUEL LESS</p> <button class="  btn btn-lg btn-block btn-dark" type="button">BOOK NOW</button>
+        <img src="images/cycle1.jpg">  <h4>MOUNTAIN BIKE</h4> <p>Unlimited App Usage,BEST EVER BIKE,FUEL LESS</p> <button class="  btn btn-lg btn-block btn-warning" type="button">BOOK NOW</button>
         
   </div>
 </div>
@@ -218,7 +241,7 @@ session_start();
       </div>
       <div class="card-body">
             
-            <img src="images/cycle2.png"><h4>BEST CYCLE</h4> <p>BEST RIDE,UNLIMITED RIDE,UNLIMITED TIME</p> <button class="  btn btn-lg btn-block btn-dark" type="button">BOOK NOW</button>
+            <img src="images/cycle2.png"><h4>BEST CYCLE</h4> <p>BEST RIDE,UNLIMITED RIDE,UNLIMITED TIME</p> <button class="  btn btn-lg btn-block btn-warning" type="button">BOOK NOW</button>
             
       </div>
     </div>
@@ -230,7 +253,7 @@ session_start();
       </div>
       <div class="card-body">
             
-            <img src="images/cycle3.png"><h4>EFFICIENT!</h4> <p>Pirority Listing,Unlimited XPECTATIONS,TOP RATED</p> <button class="  btn btn-lg btn-block btn-dark" type="button"  >BOOK NOW</button>
+            <img src="images/cycle3.png"><h4>EFFICIENT!</h4> <p>Pirority Listing,Unlimited XPECTATIONS,TOP RATED</p> <button class="  btn btn-lg btn-block btn-warning" type="button"  >BOOK NOW</button>
             
       </div>
     </div></div>
@@ -243,7 +266,7 @@ session_start();
       </div>
       <div class="card-body">
             
-            <img src="images/Montra_Blues11.png">  <h4>MOUNTAIN BIKE</h4> <p>Unlimited App Usage,BEST EVER BIKE,FUEL LESS</p> <button class="  btn btn-lg btn-block btn-dark" type="button">BOOK NOW</button>
+            <img src="images/Montra_Blues11.png">  <h4>MOUNTAIN BIKE</h4> <p>Unlimited App Usage,BEST EVER BIKE,FUEL LESS</p> <button class="  btn btn-lg btn-block btn-warning" type="button">BOOK NOW</button>
             
       </div>
     </div>
@@ -256,7 +279,7 @@ session_start();
       </div>
       <div class="card-body">
             
-            <img src="images/avon.webp"> <h4>BEST CYCLE</h4> <p>BEST RIDE,UNLIMITED RIDE,UNLIMITED TIME</p> <button class="  btn btn-lg btn-block btn-dark" type="button">BOOK NOW</button>
+            <img src="images/avon.webp"> <h4>BEST CYCLE</h4> <p>BEST RIDE,UNLIMITED RIDE,UNLIMITED TIME</p> <button class="  btn btn-lg btn-block btn-warning" type="button">BOOK NOW</button>
             
       </div>
     </div></div>
@@ -267,7 +290,7 @@ session_start();
       </div>
       <div class="card-body">
             
-            <img src="images/shwinn.jpg"> <h4>EFFICIENT!</h4> <p>Pirority Listing,Unlimited XPECTATIONS,TOP RATED</p> <button class="  btn btn-lg btn-block btn-dark" type="button">BOOK NOW</button>
+            <img src="images/shwinn.jpg"> <h4>EFFICIENT!</h4> <p>Pirority Listing,Unlimited XPECTATIONS,TOP RATED</p> <button class="  btn btn-lg btn-block btn-warning" type="button">BOOK NOW</button>
             
       </div>
     </div></div>
@@ -288,7 +311,7 @@ session_start();
     </br>
   </div>
   <div class="faqButton" style="grid-row-start: 4; grid-column-start: 1;grid-column-end: 4;">
-     <center style="margin-left:auto;margin-right: auto;"> <button class="btn btn-dark btn-lg download-button btk"></i>FAQ’s</button></center>
+     <center style="margin-left:auto;margin-right: auto;"> <button class="btn btn-warning btn-lg download-button btk"></i>FAQ’s</button></center>
     </div>
   </div>
 
@@ -329,7 +352,7 @@ session_start();
   </section>
 
   <footer>
-    <div class="foot">
+    <div class="foot" style="color:white;">
      <br><br><br>
       <div class="links">
         <div class="categories">
@@ -341,7 +364,7 @@ session_start();
             <li>MTBs</li>
           </ul>
         </div>
-        <div class="information">
+        <div class="information" >
           <h3>Information</h3><br><br>
           <ul title="Information" >
             <li>Our Stores</li>
@@ -360,14 +383,15 @@ session_start();
     </div>
     <br>
   </div>
-    <div class="address" style="background-color:black; padding:20px; text-align: center;" >     
-      <p><center><b>Address :</b> Dwarika Prasad Mishra Indian Institute of Information Technology Design and Manufacturing Jabalpur, Near dumna National park, Airport Road ,Jabalpur, Madhya pradesh-482005</center></p>
-    </div><div class="si">
-    <i class="social-icon fa-brands fa-facebook"></i>
-    <i class="social-icon fa-brands fa-instagram"></i>
-    <i class="social-icon fa-brands fa-twitter"></i>
-    <p>© Copyright Soleridee</p></div>
-    </div>
+   <div class="address" style="background-color:black; padding:20px; text-align: center; color:#EAEAEA;" >
+    <p><center><b>Address :</b> Dwarika Prasad Mishra Indian Institute of Information Technology Design and Manufacturing Jabalpur, Near dumna National park, Airport Road ,Jabalpur, Madhya pradesh-482005</center></p>
+  <div class="si">
+  <i class="social-icon fa-brands fa-facebook mx-2"></i>
+  <i class="social-icon fa-brands fa-instagram mx-2"></i>
+  <i class="social-icon fa-brands fa-twitter mx-2"></i>
+  <p>© Copyright Soleridee</p></div>
+  </div>
+  </div>
   </footer>
   
 </body>

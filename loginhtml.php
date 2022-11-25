@@ -17,7 +17,7 @@
         <div class="txt_field">
           <input type="text" name="username">
           <span></span>
-          <label>Username</label>
+          <label>Roll Number</label>
         </div>
         <div class="txt_field">
           <input type="password" name="password">

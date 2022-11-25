@@ -121,16 +121,15 @@ a.carousel-control-prev{
     height:50px; 
     width:150px;
 }
-.foot{
+.foot {
     text-align:center;
+    color: white;
     /* padding-top: 80px; */
     padding: 10px;
     /* display: grid; */
     justify-content: space-around;
-    /* grid-template-columns: repeat(auto-fill,minmax(200px,3fr 1fr)); */
-    /* font-size:2rem; */
-    /* border: black solid 10px; */
     background-color: rgb(44, 44, 44);
+    /* color: white; */
 }
 .links div{
     justify-content: center;
@@ -232,4 +231,33 @@ a.carousel-control-prev{
 }
 .nav-link{
     color:white;
+}
+.best{
+
+    line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #ff5e3a;
+        background: linear-gradient(#ff5e3a 0%, #ff653c 69%, #ff4e3c 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+}
+.best-1{
+  line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #f1a796;
+        background: linear-gradient(#f1a796 0%, #f1a796 69%, #f1a796 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+
+}
+.information{
+    color:rgb(250, 253, 252)
 }
