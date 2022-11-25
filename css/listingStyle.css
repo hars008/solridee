@@ -190,3 +190,29 @@ body{
 @media only screen and (max-width: 990px){
     .pricingTable{ margin: 0 0 40px; }
 }
+.Details{
+  text-align:center;
+  color:rgb(15, 6, 34);
+  font-size: 1.25rem;
+  font-weight:bold;
+  border:5px solid #161418;
+  /* border-collapse: collapse; */
+  margin:auto;
+  margin-top:70px;
+  margin-bottom:40px;
+  /* width:40%; */
+}
+.firstrow{
+  background-color: #1e1d1f;
+    color:#cee2f0;
+}
+td,tr,th{
+  border:2px solid black;
+}
+.pagehead{
+  margin-top:50px;
+  text-align:center;
+   font-family:cursive;
+   font-size:2.3rem;
+   font-weight:800;
+}
