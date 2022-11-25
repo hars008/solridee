@@ -193,11 +193,14 @@ session_start();
         </a>
       </div></section>
   <section id="Featured-products">
+    
 
-    <h2 class="ff"><b>Find the BEST</b> cycle For You</h2>
-    <p class="pp">You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your </br>
-      holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes</br>
-       with best deals!!!</p>
+      <h2 ><b>Find the BEST</b><div class="best"> cycle For You</h2></div>
+      <div class="best-1">
+      <p >You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your </br>
+        holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes</br>
+         with best deals!!!</p>
+    </div>
 <div class="row">
   <div class="pricing-column col-lg-4 col-md-6">
 <div class="card ">
