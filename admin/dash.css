@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+  }
+
+li{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:25px;
+}
+a{
+    color:silver;
+}
+h1{
+    padding-top:20px;
+    padding-left:20px;
+}
+ul{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.main-content{
+    height:100%;
+    padding-right:20px;
+}
+.card-content{
+    padding:10px;
+}
+.upper{
+    color:white;
+    padding-bottom:10px;
+    padding-top:15px;
+}
+.upper h1{
+    margin:0px;
+    padding:0px;
+    padding-bottom:10px;
+    padding-top:10px;
+    font-weight:490;
+    font-size:2.5rem;
+}
+.upper p{
+      font-size:1.2rem;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      padding-top:6px;
+}
+.lower{
+    background-color: #f8f5f0;;
+    padding-top:10px;
+}
+
+.details-button div{
+ color:black;
+}
+.details-button:hover{
+  text-decoration:none;
+}

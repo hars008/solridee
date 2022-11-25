@@ -8,14 +8,19 @@
   <body>
     <div class="center">
       <h1>Login</h1>
+      <?php if (isset($_GET['error'])) { ?>
+
+<p class="error" style="color:red; padding-left:25px; padding-top :15px;"><?php echo $_GET['error']; ?></p>
+
+<?php } ?>
       <form action="login.php" method="post">
         <div class="txt_field">
-          <input type="text" required name="username">
+          <input type="text" name="username">
           <span></span>
           <label>Username</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password">
+          <input type="password" name="password">
           <span></span>
           <label>Password</label>
         </div>
