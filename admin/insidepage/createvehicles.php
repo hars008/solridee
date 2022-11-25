@@ -5,18 +5,20 @@ $msg = "";
 
 // If upload button is clicked ...
 if (isset($_POST['upload'])) {
+    $cid=$_POST['cid'];
+    $model=$_POST['model'];
+    $brand=$_POST['brand'];
+    $color=$_POST['colour'];
+    $type=$_POST['type'];
+    $sec=$_POST['security_amt'];
 
 	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
 	$folder = "../../images/" . $filename;
 
 	$db = mysqli_connect("localhost", "root", "", "sql12531292");
-
-	// Get all the submitted data from the form
-	// $sql = "INSERT INTO cycles (filename) VALUES ('$filename')";
     $sql = "INSERT INTO cycles VALUES
     ('$cid','$model','$brand','$color','$type','$sec','$filename')";
-	// Execute query
 	mysqli_query($db, $sql);
     if (move_uploaded_file($tempname, $folder)) {
         echo ".";
