@@ -122,6 +122,7 @@ a.carousel-control-prev{
     width:150px;
 }
 .foot{
+    color: white;
     text-align:center;
     /* padding-top: 80px; */
     padding: 10px;
@@ -232,4 +233,30 @@ a.carousel-control-prev{
 }
 .nav-link{
     color:white;
+}
+.best{
+
+    line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #ff5e3a;
+        background: linear-gradient(#ff5e3a 0%, #ff653c 69%, #ff4e3c 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+}
+.best-1{
+  line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #ff5e3a;
+        background: linear-gradient(#ff5e3a 0%, #ff653c 69%, #ff4e3c 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+
 }
