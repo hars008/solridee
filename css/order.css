@@ -1,0 +1,241 @@
+#grad {
+}
+body {
+    position: relative;
+    background-image: linear-gradient(to right, rgba(227, 223, 223, 0), rgb(240, 216, 40));
+}
+
+.past:hover
+{
+    /* background-color: black; */
+    top: -10px;
+}
+.order{
+    /* width: 250px; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+    transition: 0.5s;
+    height:10rem;
+    background-color: white;
+    /* padding: 2rem; */
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.order:hover{
+    transform: scale(1.05);
+}
+.profile-img
+{
+    padding-left: 2rem;
+    height: 5rem;
+    width: 7rem;
+}
+.topimg {
+    height: auto;
+    width: 100%;
+    color: white;
+
+}
+
+.top {
+
+    position: relative;
+
+}
+
+.inside-top {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    color: white;
+
+}
+
+.row1 {
+    text-align: center;
+
+
+}
+
+.list-img {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    height: 8rem;
+    width: 8rem;
+}
+
+.view-details {
+    margin-top: 9rem;
+    background-color: #EAEAEA;
+}
+
+.bottom {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    background-color: #3C4048;
+    color: white;
+    text-align: center;
+}
+
+.deals {
+    font-size: 0.7rem;
+    font-weight: lighter;
+    color: #CFD2CF;
+
+}
+
+.btn1 {
+    width: 11rem;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.information ul {
+    color: #CFD2CF;
+    list-style-type: none;
+    padding-left: 0px;
+    font-weight: lighter;
+}
+
+
+/* search area */
+:root {
+    --g-color1: grey;
+    --g-color2: #FFCC68;
+}
+
+.pricingTable {
+    background: linear-gradient(to left bottom, var(--g-color1), var(--g-color2));
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 0 35px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2);
+}
+
+.pricingTable .pricingTable-header {
+    color: #fff;
+    text-align: left;
+    padding: 0 0 0 35px;
+    margin: 0 0 25px;
+}
+
+.pricingTable .title {
+    color: var(--g-color1);
+    background-color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 30px;
+    margin: 0 0 25px;
+    border-radius: 50px 0 0 50px;
+}
+
+.pricingTable .price-value {
+    text-align: center;
+    display: inline-block;
+}
+
+.pricingTable .price-value .currency {
+    font-size: 23px;
+    line-height: 23px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.pricingTable .price-value .amount {
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 58px;
+    display: inline-block;
+}
+
+.pricingTable .duration {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.pricingTable .pricing-content {
+    text-align: left;
+    padding: 0 15px 0 35px;
+    margin: 0 0 25px;
+    list-style: none;
+    display: inline-block;
+}
+
+.pricingTable .pricing-content li {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    padding: 0 15px 0 40px;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.pricingTable .pricing-content li:last-child {
+    margin: 0;
+}
+
+.pricingTable .pricing-content li:before {
+    content: "\f00c";
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: "Font Awesome 5 free";
+    font-size: 17px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 31px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.pricingTable .pricing-content li.disable:before {
+    content: "\f00d";
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pricingTable .pricingTable-signup a {
+    color: var(--g-color2);
+    background-color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 5px 18px;
+    margin: 0 35px;
+    border-radius: 50px;
+    display: block;
+    transition: all 0.3s;
+}
+
+.pricingTable .pricingTable-signup a:hover {
+    color: var(--g-color1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pricingTable.green {
+    --g-color1: #98C944;
+    --g-color2: #E8CC88;
+}
+
+.pricingTable.blue {
+    --g-color1: #54B2E5;
+    --g-color2: #F67AA6;
+}
+
+@media only screen and (max-width: 990px) {
+    .pricingTable {
+        margin: 0 0 40px;
+    }
+}
