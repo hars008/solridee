@@ -19,6 +19,23 @@
     
 </head>
 <body>
+<?php 
+    if(isset($_SESSION['userid'])){
+       
+      
+  ?>
+        <ul type="none">
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['userid'] ; ?></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><?php echo $_SESSION['userid'] ; ?></a>
+              <a class="dropdown-item" href="#">Change password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+          </li>
+          </ul>
+<?php } ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-black" style="background-color:black; height:60px;">
   <a class="navbar-brand" href="#">
   <img src="../images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">

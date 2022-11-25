@@ -52,73 +52,83 @@ session_start();
 <body>
   <section id="title">
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">
-  <img src="images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
-  
-  SolRidee</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img src="images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+        
+        SolRidee</a>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
-    <li class="nav-item active">
-    <?php 
-    if(isset($_SESSION['username'])){
-      
-  ?>
-   <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
-        </li>
-       
-        <li class="nav-item active">
-          <a class="nav-link" href="loginhtml.php">Orders <span class="sr-only">(current)</span></a>
-        </li><?php }?>
-    <?php 
-    if(!isset($_SESSION['username'])){
-      
-  ?>
-          <a class="nav-link" href="sign.html">Register <i class="fa-solid fa-house"></i><span class="sr-only"></span></a>
-        </li>
-       
-        <li class="nav-item active">
-          <a class="nav-link" href="loginhtml.php">login  <i class="fa-solid fa-user"></i><span class="sr-only">(current)</span></a>
-        </li><?php }?>
-        <li class="nav-item active">
-            <a class="nav-link" href="listing.html">Wish List  <i class="fa-solid fa-heart"></i><span class="sr-only">(current)</span></a>
-          </li>
-     
-          <!-- <li class="nav-item">
-              <a class="nav-link active" href="#cta">Book now</a>
-          </li> -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
           <li class="nav-item active">
-            <a class="nav-link" href="listing.html">Book Now <i class="fa-solid fa-bookmark"></i><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="home.php"><i class="fa fa-home" aria-hidden="true"></i>   Home<span class="sr-only">(current)</span></a>
+                </li>
+            <?php 
+            if(isset($_SESSION['username'])){
+            ?>
+            
+          <li class="nav-item active">
+            <a class="nav-link" href="loginhtml.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders <span class="sr-only">(current)</span></a>
           </li>
-    </ul>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-   
-  </div>
-  <?php 
-    if(isset($_SESSION['username'])){
-       
-      
-  ?>
-        <ul type="none">
-         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['username'] ; ?></a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
-              <a class="dropdown-item" href="#">User Details</a>
-              <a class="dropdown-item" href="#">Orders</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="logout.php">Logout</a>
-            </div>
+          <li class="nav-item active">
+                <a class="nav-link" href="listing.html"><i class="fa-solid fa-heart"></i>Wish List  <span class="sr-only">(current)</span></a>
           </li>
+            <?php }?>
+
+            <?php 
+              if(!isset($_SESSION['username'])){
+            ?>
+
+              <li class="nav-item active">
+              <a class="nav-link" href="sign.html"><i class="fa fa-sign-in" aria-hidden="true"></i>   Register <span class="sr-only"></span></a>
+              </li>
+            
+              <li class="nav-item active">
+              <a class="nav-link" href="loginhtml.php"><i class="fa-solid fa-user"></i>   login  <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <?php }?>
+
+              
+          
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" href="#cta">Book now</a>
+                </li> -->
+                <li class="nav-item active">
+                <a class="nav-link" href="listing.php"><i class="fa-solid fa-bookmark"></i>   Book Now <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="contact.php"><i class="fa fa-phone" aria-hidden="true"></i>   Contact us <span class="sr-only">(current)</span></a>
+                </li>
+                
           </ul>
-<?php } ?>
-</nav>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        
+        </div>
+        <?php 
+          if(isset($_SESSION['username'])){
+            
+            
+        ?>
+              <ul type="none">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['username'] ; ?></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
+                    <a class="dropdown-item" href="#">User Details</a>
+                    <a class="dropdown-item" href="#">Orders</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="logout.php">Logout</a>
+                  </div>
+                </li>
+                </ul>
+        <?php } ?>
+  </nav>
 
     <!-- Navbar -->
     
@@ -158,19 +168,29 @@ session_start();
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
+            <?php
+              include('conn.php');
+              $sql="SELECT * FROM cycles";
+              $res=mysqli_query($conn,$sql);
+              while($result=mysqli_fetch_assoc($res))
+              {
+            ?>
+
+
           <div class="row my-2">
             <div class="col-lg-6 col-md-6 col-sm-12">
-              <img class="list-img" src="images/1.png" alt="">
+              <img class="list-img" src="images/<?php echo $result['image']; ?>" alt="">
             </div>
+
             <div class="col-lg-6 col-md-6 col-sm-12 view-details">
-              <h6>Hero,SS440</h6>
-              Rs.150 per Day
+              <h6><?php echo $result['brand'].",".$result['model'];?></h6>
+               Rs.<?php echo $result['security_amt']." "?> per Day
               <div class="row my-2">
                 <div class="col">
-                  <i class="fa-solid fa-user"></i> 2 seats
+                <i class="fa-solid fa-palette"></i><?php echo " ".$result['color'];?>
                 </div>
                 <div class="col">
-                  <i class="fa-solid fa-calendar-days"></i> model
+                <i class="fa fa-superpowers" aria-hidden="true"></i><?php echo $result['type'];?>
                 </div>
                 <div class="col">
                   <i class="fa-solid fa-location-dot"></i> map
@@ -179,7 +199,8 @@ session_start();
               <button type="button" class="btn btn-warning">View details <i class="fa-solid fa-circle-chevron-right"></i></button>
             </div>
           </div>
-          <div class="row my-2">
+          <?php } ?>
+          <!-- <div class="row my-2">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <img class="list-img" src="images/2.png" alt="">
             </div>
@@ -284,7 +305,7 @@ session_start();
           </div>
           <button type="button" class="btn btn-warning">View details <i class="fa-solid fa-circle-chevron-right"></i></button>
         </div>
-      </div>
+      </div> -->
     </div>
     </div>
 
