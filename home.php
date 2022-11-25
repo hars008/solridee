@@ -100,9 +100,9 @@ session_start();
          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['username'] ; ?></a>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
               <a class="dropdown-item" href="#">User Details</a>
               <a class="dropdown-item" href="#">Orders</a>
-              <a class="dropdown-item" href="#">Something else here</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="logout.php">Logout</a>
             </div>
@@ -195,8 +195,28 @@ session_start();
   <section id="Featured-products">
     
 
-      <h2 ><b>Find the BEST</b><div class="best"> cycle For You</h2></div>
-      <div class="best-1">
+      <h2 ><b>Find the BEST</b><div class="best" style=" line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #ff5e3a;
+        background: linear-gradient(#ff5e3a 0%, #ff653c 69%, #ff4e3c 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+"> cycle For You</h2></div>
+      <div class="best-1" style="line-height: 1;
+        color: #ffffff;
+        padding: 0 6px 1px 5px;
+        transform: skew(-14deg);
+        background: #f1a796;
+        background: linear-gradient(#f1a796 0%, #f1a796 69%, #f1a796 100%);
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0;
+        position: relative;
+">
       <p >You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your </br>
         holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes</br>
          with best deals!!!</p>
@@ -332,7 +352,7 @@ session_start();
   </section>
 
   <footer>
-    <div class="foot">
+    <div class="foot" style="color:white;">
      <br><br><br>
       <div class="links">
         <div class="categories">
@@ -344,7 +364,7 @@ session_start();
             <li>MTBs</li>
           </ul>
         </div>
-        <div class="information">
+        <div class="information" >
           <h3>Information</h3><br><br>
           <ul title="Information" >
             <li>Our Stores</li>

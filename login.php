@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST["password"])) {
 
     else{
 
-        $sql = "SELECT * FROM master_login where username='$uname' and password='$pass' ";
+        $sql = "SELECT * FROM customer where rollnumber='$uname' and password='$pass' ";
 
         $result = mysqli_query($conn, $sql);
 
@@ -44,15 +44,19 @@ if (isset($_POST['username']) && isset($_POST["password"])) {
 
             $row = mysqli_fetch_assoc($result);
 
-            if ($row['username'] === $uname && $row['password'] === $pass) {
+            if ($row['rollnumber'] === $uname && $row['password'] === $pass) {
 
                 echo "Logged in!";
 
-                $_SESSION['username'] = $row['username'];
+                $_SESSION['rollnumber'] = $row['rollnumber'];
 
-                $_SESSION['name'] = $row['name'];
+                $_SESSION['username'] = $row['firstname'] .' '.$row['lastname']  ;
 
-                $_SESSION['id'] = $row['id'];
+                $_SESSION['mobilenumber'] = $row['mobilenumber'];
+                
+                $_SESSION['hostelname'] = $row['hostelname'];
+                
+                $_SESSION['roomnumber'] = $row['roomnumber'];
 
                 header("Location: home.php?");
 
