@@ -1,4 +1,9 @@
 <?php
+session_start();
+   if(!isset($_SESSION['userid'])){
+    header('adminlogin.html');
+   }
+
 error_reporting(0);
 
 $msg = "";
@@ -38,18 +43,18 @@ if (isset($_POST['upload'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/stylesol.css"> -->
-  <script src="https://kit.fontawesome.com/0a131cdcf3.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  
-  <link rel="stylesheet" href="K:\Ready\web\bootstrap-5.2.0\dist\css\bootstrap.css">
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dropdowns/">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/stylesol.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/45b5e06856.js" crossorigin="anonymous"></script>
+  <!-- bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../../css/listingStyle.css">
-  <title></title>
 </head>
 
 <body>
@@ -57,41 +62,54 @@ if (isset($_POST['upload'])) {
         
         
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg  navbar-dark bg-black">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">SolRidee</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left:10%; padding-right: 10%;">
-                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">About</a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link active">Bike Listing</a>
-            </li>
-            
-            <li class="nav-item ">
-                <a class="nav-link active">FAQs</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link active">Contact Us</a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search" >
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-            <button id="search-button" class="btn btn-light" type="button" name="button">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-    </div>
-</div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+  <img src="../../images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+  SolRidee</a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"  style="margin-right:10%;">
+    
+   
+    <li class="nav-item active">
+      <a class="nav-link" href="../dash.php"> Dashboard <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+          <a class="nav-link" href="regusers.php">Reg Users  <span class="sr-only">(current)</span></a>
+    </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;">Brands</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="brands.php">View Brands</a>
+              <a class="dropdown-item" href="createbrands.php">Create Brands</a></div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;">Cycles</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="cycles.php">View Cycles</a>
+              <a class="dropdown-item" href="createvehicles.php">Post cycle</a>
+            </div>
+          </li>
+          <!-- <li class="nav-item active">
+          <a class="nav-link" href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i>   Contact us <span class="sr-only">(current)</span></a>
+          </li> -->
+    </ul>
+  
+  <?php 
+    if(isset($_SESSION['userid'])){
+       
+      
+  ?>
+        <ul type="none">
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['userid'] ; ?></a>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+          </li>
+          </ul>
+  <?php } ?>
 </nav>
 <div class="top">
     <img class="topimg" src="../../images/topimg.jpg" alt="">
