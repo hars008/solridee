@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php 
+    session_start();
+       
+      
+  ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +17,23 @@
     
 </head>
 <body>
+<?php 
+    if(isset($_SESSION['userid'])){
+       
+      
+  ?>
+        <ul type="none">
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;"><?php echo $_SESSION['userid'] ; ?></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><?php echo $_SESSION['userid'] ; ?></a>
+              <a class="dropdown-item" href="#">Change password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+          </li>
+          </ul>
+<?php } ?>
     <div class="row main-content" style=" padding-left:0px; ">
          <div class="col-lg-2 col-sm-12" style=" background-color:#2c3136" >
             <nav style=" padding:0px;"class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:0px;padding-top:0px; display:inline-block;">

@@ -1,5 +1,5 @@
 <?php
-include('conn.php');
+include('../connection.php');
 $userid=$_POST['username'];
 $pass=$_POST["password"];
 
@@ -9,7 +9,8 @@ $sql="select * from master_login where username='$userid' and password='$pass' "
 $res=mysqli_query($conn,$sql);
 if($result=mysqli_fetch_assoc($res))
 {
-$_SESSION['userid']=$result['userid'];
+    session_start();
+$_SESSION['userid']=$result['username'];
 
 header('location:dash.php');
 }
