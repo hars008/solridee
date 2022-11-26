@@ -314,49 +314,50 @@ session_start();
 
 
 <!-- Bottom -->
-  <section>
-    <div class="bottom">
-      <div class="row my-5">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-        <h6>ABOUT US</h6>
-        <div class="information">
-          <ul title="Information" >
-            <li>Our Stores</li>
-            <li>Contact Us</li>
-            <li>Terms & Conditions</li>
+<section>
+        <div class="bottom">
+            <div class="row my-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h6>ABOUT US</h6>
+                    <div class="information">
+                        <ul title="Information">
+                            <li><a href="listing.php" style="color:white; text-decoration:none;">Our Stores</a></li>
+                            <li><a href="contact.php" style="color:white; text-decoration:none;">Contact Us</a></li>
+                            <li><a href="FAQ.html" style="color:white; text-decoration:none;">FAQ's</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h6>Subcsribe SolRidee</h6>
+                    <div class="row">
+                        <div class="col">
 
-          </ul>
-        </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-        <h6>Subcsribe SolRidee</h6>
-        <div class="row">
-          <div class="col">
+                        </div>
+                        <div class="col">
+                            <form class="my-2" role="search" action="subscription.php" method="POST">
+                                <input class="form-control me-2" type="search" placeholder="Enter Email Address"
+                                    aria-label="Search" name="email"><br/>
+                                    <button type="submit" class="btn btn1 btn-warning">Subscribe <i
+                                            class="fa-solid fa-circle-chevron-right"></i></button>
+                            </form>
+                            <br>
+                            <div class="deals">
+                                We send great deals and latest auto news to our subscribed user every week.
+                            </div>
 
-          </div>
-          <div class="col">
-            <form class="d-flex my-2" role="search">
-              <input class="form-control me-2" type="search" placeholder="Enter Email Address" aria-label="Search">
-            </form>
-            <button type="button" class="btn btn1 btn-warning">Subscribe <i class="fa-solid fa-circle-chevron-right"></i></button>
-            <br>
-            <div class="deals">
-              We send great deals and latest auto news to our subscribed user every week.
+                        </div>
+                        <div class="col">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-          </div>
-          <div class="col">
-
-          </div>
-
         </div>
-
-      </div>
-
-      </div>
-
-    </div>
-  </section>
+    </section>
 
 
 <!-- last -->
