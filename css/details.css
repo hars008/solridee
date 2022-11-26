@@ -1,3 +1,6 @@
+body{
+      background-image: linear-gradient(to right, rgba(227, 223, 223, 0), rgb(240, 216, 40));
+}
 .topimg
 {
   height:auto;
