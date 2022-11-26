@@ -70,7 +70,7 @@ session_start();
             ?>
             
           <li class="nav-item active">
-            <a class="nav-link" href="loginhtml.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="order.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Orders <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
                 <a class="nav-link" href="listing.html"><i class="fa-solid fa-heart"></i>Wish List  <span class="sr-only">(current)</span></a>
@@ -121,7 +121,7 @@ session_start();
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
                     <a class="dropdown-item" href="#">User Details</a>
-                    <a class="dropdown-item" href="#">Orders</a>
+                    <a class="dropdown-item" href="order.php">My Orders</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="logout.php">Logout</a>
                   </div>
@@ -184,7 +184,7 @@ session_start();
 
             <div class="col-lg-6 col-md-6 col-sm-12 view-details">
               <h6><?php echo $result['brand'].",".$result['model'];?></h6>
-               Rs.<?php echo $result['security_amt']." "?> per Day
+               Rs.<?php echo $result['security_amt']." "; ?> per Day
               <div class="row my-2">
                 <div class="col">
                 <i class="fa-solid fa-palette"></i><?php echo " ".$result['color'];?>
