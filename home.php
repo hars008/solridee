@@ -52,7 +52,7 @@ session_start();
       ?>
        
     <li class="nav-item active">
-      <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="order.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Orders <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item active">
           <a class="nav-link" href="listing.php"><i class="fa-solid fa-heart"></i>Wish List  <span class="sr-only">(current)</span></a>
@@ -105,7 +105,7 @@ session_start();
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#"><?php echo $_SESSION['rollnumber'] ; ?></a>
               <a class="dropdown-item" href="#">User Details</a>
-              <a class="dropdown-item" href="#">Orders</a>
+              <a class="dropdown-item" href="order.php">My Orders</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="logout.php">Logout</a>
             </div>
