@@ -50,6 +50,8 @@ if (isset($_POST['username']) && isset($_POST["password"])) {
 
                 $_SESSION['rollnumber'] = $row['rollnumber'];
 
+                $_SESSION['firstname'] = $row['firstname'];
+
                 $_SESSION['username'] = $row['firstname'] .' '.$row['lastname']  ;
 
                 $_SESSION['mobilenumber'] = $row['mobilenumber'];
@@ -57,6 +59,9 @@ if (isset($_POST['username']) && isset($_POST["password"])) {
                 $_SESSION['hostelname'] = $row['hostelname'];
                 
                 $_SESSION['roomnumber'] = $row['roomnumber'];
+               
+                $_SESSION['cid'] = $row['cid'];
+
 
                 header("Location: home.php?");
 
