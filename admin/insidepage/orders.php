@@ -98,11 +98,11 @@ include('../connection.php');
 $sql="SELECT * FROM orders" ;
 $res=mysqli_query($conn, $sql);
 echo'<h1 class="pagehead" style="text-align:center; margin-top:5%; font-size:1.95rem; font-weight:bold; font-family:cursive;">Booking Details:</h1>';
-echo '<table border="1" class="Details" cellspacing="4" cellpadding="3" style="text-align:center; margin:auto;margin-bottom:5%;" ><tr class="firstrow"><th>Order id</th><th>Booking Date</th><th>Amount Deposited</th><th>
+echo '<table border="1" class="Details" cellspacing="4" cellpadding="3" style="text-align:center; margin:auto;margin-bottom:5%;" ><tr class="firstrow"><th>Order id</th><th>Cycleid</th><th>Booking Date</th><th>Amount Deposited</th><th>
 Customer id</th><th>Roll number</th><th>Status</th><th>Confirm/Cancel</th></tr>';
 while($result=mysqli_fetch_assoc($res))
 {
-echo '<tr><td>'. $result['oid'] . '</td><td>'. $result['date'] . '</td><td>'.
+echo '<tr><td>'. $result['cycleid'] . '</td><td>'. $result['oid'] . '</td><td>'. $result['date'] . '</td><td>'.
 $result['amount'] . '</td><td>' . $result['cid'] . '</td><td>'.
 $result['rollnumber'] . '</td><td>' . $result['status'] .'</td><td><a
 href="updatecforders.php?uid=' . $result['oid'] . ' ">Confirm/</a><a
