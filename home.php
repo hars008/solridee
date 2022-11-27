@@ -29,7 +29,7 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</head>
+  <link rel="stylesheet" href="css/order.css"></head>
 
 <body>
 
@@ -52,7 +52,7 @@ session_start();
       ?>
        
     <li class="nav-item active">
-      <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="order.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Orders <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item active">
           <a class="nav-link" href="listing.php"><i class="fa-solid fa-heart"></i>Wish List  <span class="sr-only">(current)</span></a>
@@ -85,7 +85,7 @@ session_start();
           <a class="nav-link" href="contact.php"><i class="fa fa-phone" aria-hidden="true"></i>   Contact us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-          <a class="nav-link" href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>   Faqs <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="FAQ.html"><i class="fa fa-question-circle" aria-hidden="true"></i>   Faqs <span class="sr-only">(current)</span></a>
           </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -274,7 +274,7 @@ session_start();
     </br>
   </div>
   <div class="faqButton" style="grid-row-start: 4; grid-column-start: 1;grid-column-end: 4;">
-     <center style="margin-left:auto;margin-right: auto;"> <button class="btn btn-warning btn-lg download-button btk"></i>FAQ’s</button></center>
+     <center style="margin-left:auto;margin-right: auto;"> <a href="FAQ.html"><button class="btn btn-warning btn-lg download-button btk"></i>FAQ’s</button></a></center>
     </div>
   </div>
 
@@ -315,37 +315,51 @@ session_start();
   </section>
 
   <footer>
-    <div class="foot" style="color:white;">
-     <br><br><br>
-      <div class="links">
-        <div class="categories">
-          <h3>Categories</h3><br><br>
-          <ul title="Categories" >
-            <li>Entire fleet</li>
-            <li>Cycles</li>
-            <li>Hybrids</li>
-            <li>MTBs</li>
-          </ul>
+  <section>
+        <div class="bottom">
+            <div class="row my-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h6>ABOUT US</h6>
+                    <div class="information">
+                        <ul title="Information">
+                            <li><a href="listing.php" style="color:white; text-decoration:none;">Our Stores</a></li>
+                            <li><a href="contact.php" style="color:white; text-decoration:none;">Contact Us</a></li>
+                            <li><a href="FAQ.html" style="color:white; text-decoration:none;">FAQ's</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h6>Subcsribe SolRidee</h6>
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col">
+                            <form class="my-2" role="search" action="subscription.php" method="POST">
+                                <input class="form-control me-2" type="search" placeholder="Enter Email Address"
+                                    aria-label="Search" name="email"><br/>
+                                    <button type="submit" class="btn btn1 btn-warning">Subscribe <i
+                                            class="fa-solid fa-circle-chevron-right"></i></button>
+                            </form>
+                            <br>
+                            <div class="deals">
+                                We send great deals and latest auto news to our subscribed user every week.
+                            </div>
+
+                        </div>
+                        <div class="col">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="information" >
-          <h3>Information</h3><br><br>
-          <ul title="Information" >
-            <li>Our Stores</li>
-            <li>Contact Us</li>
-            <li>Terms & Conditions</li>
-          
-          </ul>
-        </div>
-        <div class="my_account">
-          <h3>My Account</h3><br><br>
-          <ul title="My Account" >
-            <li>My orders</li>
-            <li>My account</li>
-            </ul>
-        </div>
-    </div>
-    <br>
-  </div>
+    </section>
+
    <div class="address" style="background-color:black; padding:20px; text-align: center; color:#EAEAEA;" >
     <p><center><b>Address :</b> Dwarika Prasad Mishra Indian Institute of Information Technology Design and Manufacturing Jabalpur, Near dumna National park, Airport Road ,Jabalpur, Madhya pradesh-482005</center></p>
   <div class="si">

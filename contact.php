@@ -55,6 +55,7 @@ if(isset($_POST['submit']))
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <!-- css stylesheets -->
   <link rel="stylesheet" href="css/stylesol.css">
+  <link rel="stylesheet" href="css/order.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/45b5e06856.js" crossorigin="anonymous"></script>
     <!-- bootstrap scripts -->
@@ -246,10 +247,49 @@ if(isset($_POST['submit']))
 
   <!-- Bottom -->
   <section>
-    <div class="foot">
-      
-    </div>
-  </section>
+        <div class="bottom">
+            <div class="row my-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h6>ABOUT US</h6>
+                    <div class="information">
+                        <ul title="Information">
+                            <li><a href="listing.php" style="color:white; text-decoration:none;">Our Stores</a></li>
+                            <li><a href="contact.php" style="color:white; text-decoration:none;">Contact Us</a></li>
+                            <li><a href="FAQ.html" style="color:white; text-decoration:none;">FAQ's</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h6>Subcsribe SolRidee</h6>
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col">
+                            <form class="my-2" role="search" action="subscription.php" method="POST">
+                                <input class="form-control me-2" type="search" placeholder="Enter Email Address"
+                                    aria-label="Search" name="email"><br/>
+                                    <button type="submit" class="btn btn1 btn-warning">Subscribe <i
+                                            class="fa-solid fa-circle-chevron-right"></i></button>
+                            </form>
+                            <br>
+                            <div class="deals">
+                                We send great deals and latest auto news to our subscribed user every week.
+                            </div>
+
+                        </div>
+                        <div class="col">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 </body>
 
 </html>
