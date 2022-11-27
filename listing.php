@@ -196,8 +196,9 @@ session_start();
                   <i class="fa-solid fa-location-dot"></i> map
                 </div>
               </div>
+              <a href="orderform.php?uid= <?php echo $result['cycleid'];?>  " >
               <button type="button" class="btn btn-warning">View details <i class="fa-solid fa-circle-chevron-right"></i></button>
-            </div>
+               </div></a>
           </div>
           <?php } ?>
           <!-- <div class="row my-2">

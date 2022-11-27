@@ -52,7 +52,7 @@ session_start();
       ?>
        
     <li class="nav-item active">
-      <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="order.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Orders <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item active">
           <a class="nav-link" href="listing.php"><i class="fa-solid fa-heart"></i>Wish List  <span class="sr-only">(current)</span></a>
@@ -85,7 +85,7 @@ session_start();
           <a class="nav-link" href="contact.php"><i class="fa fa-phone" aria-hidden="true"></i>   Contact us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-          <a class="nav-link" href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>   Faqs <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="FAQ.html"><i class="fa fa-question-circle" aria-hidden="true"></i>   Faqs <span class="sr-only">(current)</span></a>
           </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -274,7 +274,7 @@ session_start();
     </br>
   </div>
   <div class="faqButton" style="grid-row-start: 4; grid-column-start: 1;grid-column-end: 4;">
-     <center style="margin-left:auto;margin-right: auto;"> <button class="btn btn-warning btn-lg download-button btk"></i>FAQ’s</button></center>
+     <center style="margin-left:auto;margin-right: auto;"> <a href="FAQ.html"><button class="btn btn-warning btn-lg download-button btk"></i>FAQ’s</button></a></center>
     </div>
   </div>
 
